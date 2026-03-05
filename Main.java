@@ -1,5 +1,3 @@
-import java.io.File;
-import java.io.FileNotFoundException;
 import java.util.ArrayList;
 import java.util.Scanner;
 
@@ -13,7 +11,7 @@ public class Main {
         
         //CREATE A STUDENT OBJECT USING OVERLOADED CONSTRUCTOR
         Student s1 = new Student('S', "Mahomes","Patrick", 29, 3.5);
-        System.out.println(s1.toString());
+        System.out.println(s1);
 
         //CREATE A STUDENT OBJECT USING DEFAULT CONSTRUCTOR
         Student s2 = new Student();
@@ -22,7 +20,7 @@ public class Main {
         s2.setFName("Travis");
         s2.setAge(35);
         s2.setGPA(3.4);
-
+        System.out.println(s2);
 
         //PRINT OBJECTS 
          System.out.print(s1);
@@ -31,6 +29,24 @@ public class Main {
         people.add(s1);
         people.add(s2);
 
+        for (Person p : people){
+            System.out.print(p);
+        }
+
+        //testing Apple class
+        System.out.println("\n\nTESTING APPLE CLASS");
+        Apple a = new Apple();
+        System.out.println(a + "\n");
+        
+        GoldenDelicious b = new GoldenDelicious(7);
+        System.out.println(b + "\n");
+
+        Apple c = new GoldenDelicious(8);
+        System.out.println(c + "\n");
+
+        Apple d = new GoldenDelicious();
+        System.out.println(d + "\n");
+ 
         try {
             File inFile = new File("people.txt");
             Scanner scanner = new Scanner(inFile);
@@ -64,7 +80,7 @@ public class Main {
         catch (FileNotFoundException e){
             System.out.println("Unable to open file");
         }
-         
+       
     }
 
     public static int loadArrayList(ArrayList<Person> people, Scanner input){

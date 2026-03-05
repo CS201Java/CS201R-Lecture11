@@ -5,13 +5,13 @@ public class Person {
     protected    int age;
 
     Person(){
-        this("","",0);
+        this("","",0); 
         type = 'P';
         //fname = "";
         //lname = "";
         //age = 0;
     }
-    Person(String f, String l, int a){
+    Person(String f, String l, int a){ 
         type = 'P';
         fname = f;
         lname = l;

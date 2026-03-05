@@ -2,13 +2,12 @@ public class Student extends Person {
 
     private  double gpa;
         
-    Student(){
-        super();
+    Student(){       
         type = 'S';
         gpa = 0.0;
     }
     Student(char t, String f, String l, int a, double g){
-        super(f,l,a);
+        super(f,l,a); 
         type = t;
         gpa = g;
         totalStudent++;
